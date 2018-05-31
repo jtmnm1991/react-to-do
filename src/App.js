@@ -11,7 +11,7 @@ class App extends Component {
         { description: 'Throw the dishes away', isCompleted: false },
         { description: 'Buy new dishes', isCompleted: false }
       ]
-    }
+    };
   }
 
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
        <ul>
         { this.state.todos.map( (todo, index) =>
-          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } />>
+          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } />
         )}
        </ul>
       </div>
