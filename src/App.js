@@ -2,29 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import ToDo from './components/ToDo.js';
-class ToDo extends React.Component {
-        deleteToDo(description) {
-          this.props.deleteToDo(description);
-        }
-          render() {
-            return (
-              <div className="wrapper">
-
-              <button className="deleteToDo" onClick = {(e) =>
-                  this.deleteToDo(this.props.description)}>Delete</button>
-                  {() => this.props.deleteToDo(this.props.description)}
-
-              <li>
-                <input type="checkbox" checked={ this.props.isCompleted }
-        onChange={ this.props.toggleComplete } />
-                <span>{ this.props.description }</span>
-              </li>
-              </div>
-            );
-          }
-        }
-
-    class App extends React.Component {
+class App extends React.Component {
           constructor(props) {
             super(props);
             this.state = {
@@ -83,3 +61,5 @@ class ToDo extends React.Component {
             );
           }
         }
+
+export default App;
